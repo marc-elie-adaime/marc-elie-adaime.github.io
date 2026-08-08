@@ -1,3 +1,3 @@
 # marc-elie-adaime.github.io
 
-Personal academic website — Marc-Élie Adaime.
+Personal academic website | Marc-Élie Adaime.
