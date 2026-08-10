@@ -1,21 +1,21 @@
 /* =========================================================
    Marc-Élie Adaime — traditional academic styles
-   Near-black text, restrained navy accent, system serif.
+   Single-hue Québec-blue palette; system serif typography.
    ========================================================= */
 
 :root{
-  --ink:#1b1b1b;            /* near-black text */
-  --teal:#1c3f6e;          /* restrained navy accent (links) */
-  --teal-deep:#142c4d;
-  --teal-bright:#33598f;
-  --amber:#1c3f6e;          /* reuse navy for primary buttons */
-  --amber-deep:#3a3a3a;     /* dark grey for small labels */
-  --amber-soft:#c9d4e3;     /* soft blue (hover borders) */
-  --paper:#ffffff;          /* white background */
-  --panel:#f4f5f7;          /* light grey alt sections */
-  --sage:#eceef1;           /* light grey tint */
-  --line:#d8dce1;           /* borders */
-  --muted:#565b63;          /* muted grey text */
+  --ink:#182338;            /* near-black, blue cast (body text) */
+  --teal:#1d4e89;           /* Québec blue (links, accents) */
+  --teal-deep:#143a6b;      /* deep blue (hero, dark headings) */
+  --teal-bright:#3d6fb0;    /* lighter blue */
+  --amber:#1d4e89;          /* primary buttons = Québec blue */
+  --amber-deep:#3a4a63;     /* muted blue-grey small labels */
+  --amber-soft:#bcd0e8;     /* soft blue (hover borders) */
+  --paper:#ffffff;          /* main background */
+  --panel:#eaf0f8;          /* pale Québec blue (alt sections) */
+  --sage:#e0e9f5;           /* soft blue (chips, mats, plates) */
+  --line:#cdd9ea;           /* blue-tinted borders */
+  --muted:#54617a;          /* muted blue-grey text */
   --white:#ffffff;
 
   --display:Georgia,"Times New Roman",Times,serif;
@@ -45,7 +45,7 @@ a:hover{color:var(--teal-deep)}
 
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.2rem,4vw,2.2rem)}
 
-/* ---------- eyebrow (plain uppercase label) ---------- */
+/* ---------- eyebrow ---------- */
 .eyebrow{
   font-family:var(--mono);
   font-size:.74rem;
@@ -68,7 +68,7 @@ a:hover{color:var(--teal-deep)}
 }
 .brand{display:flex;flex-direction:column;line-height:1.15;text-decoration:none}
 .brand b{font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--ink)}
-.brand span{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.brand span{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:7px}
 .nav-links{display:flex;gap:1.1rem;align-items:center;list-style:none;margin:0;padding:0}
 .nav-links a{
   font-family:var(--mono);font-size:.86rem;font-weight:400;color:var(--ink);
@@ -97,18 +97,18 @@ a:hover{color:var(--teal-deep)}
 .hero-bg{
   position:absolute;inset:0;
   background:
-    linear-gradient(180deg, rgba(20,44,77,.80), rgba(20,44,77,.92)),
+    linear-gradient(180deg, rgba(20,58,107,.80), rgba(20,58,107,.92)),
     url("Figures_webpage/42AB4789-EB84-4979-86F3-8EF3447E7F28.JPG") center/cover;
 }
 .hero-inner{position:relative;max-width:var(--maxw);margin:0 auto;padding:clamp(3rem,7vw,5.5rem) clamp(1.2rem,4vw,2.2rem)}
-.hero .eyebrow{color:#c9d4e3}
+.hero .eyebrow{color:#bcd0e8}
 .hero h1{
   font-family:var(--display);font-weight:700;
   font-size:clamp(1.9rem,4vw,3rem);line-height:1.15;
   margin:.2rem 0 1rem;max-width:22ch;
 }
-.hero p{font-size:clamp(1rem,1.6vw,1.15rem);max-width:60ch;color:#e6ebf3;margin:0 0 1.4rem;line-height:1.6}
-.hero .role{font-family:var(--mono);font-size:.78rem;letter-spacing:.03em;color:#b9c6da}
+.hero p{font-size:clamp(1rem,1.6vw,1.15rem);max-width:60ch;color:#e6ecf5;margin:0 0 1.4rem;line-height:1.6}
+.hero .role{font-family:var(--mono);font-size:.78rem;letter-spacing:.03em;color:#b3c6df}
 .btn-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
 .btn{
   display:inline-flex;align-items:center;gap:.4rem;
@@ -117,7 +117,7 @@ a:hover{color:var(--teal-deep)}
   border:1px solid transparent;text-decoration:none;
 }
 .btn-primary{background:#fff;color:var(--teal-deep);border-color:#fff}
-.btn-primary:hover{background:#e6ebf3;color:var(--teal-deep)}
+.btn-primary:hover{background:#e6ecf5;color:var(--teal-deep)}
 .btn-ghost{border-color:rgba(255,255,255,.5);color:#fff}
 .btn-ghost:hover{border-color:#fff;color:#fff}
 
@@ -133,7 +133,7 @@ main{display:block}
 .prose p{max-width:68ch;margin:0 0 1.05rem}
 .prose p:last-child{margin-bottom:0}
 
-/* simple rule (replaces the gradient bar) */
+/* simple rule */
 .strata{height:0;border:0;border-top:1px solid var(--line);width:100%;max-width:var(--maxw);margin:0 auto}
 
 /* ---------- grid cards ---------- */
@@ -150,11 +150,11 @@ main{display:block}
 .card:hover{border-color:var(--teal-bright)}
 .card .num{font-family:var(--mono);font-size:.72rem;color:var(--amber-deep);letter-spacing:.08em;text-transform:uppercase}
 .card h3{font-family:var(--display);font-weight:700;font-size:1.22rem;margin:.45rem 0 .5rem;line-height:1.25}
-.card p{margin:0;color:#333;font-size:.98rem}
-.card .fig{margin:-1.4rem -1.4rem 1.1rem;border-radius:4px 4px 0 0;overflow:hidden;background:var(--sage)}
-.card .fig img,.card .fig svg{display:block;width:100%;height:auto}
+.card p{margin:0;color:#2a3550;font-size:.98rem}
+.card .fig{margin:0 0 1.1rem;padding:.5rem;background:var(--sage);border-radius:3px}
+.card .fig img,.card .fig svg{display:block;width:100%;height:auto;border-radius:2px}
 
-/* ---------- figure / plate (natural photo, no effects) ---------- */
+/* ---------- figure / plate ---------- */
 .plate{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--white)}
 .plate .img{aspect-ratio:4/3;position:relative;background:var(--sage)}
 .plate .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -194,7 +194,7 @@ main{display:block}
 @media (max-width:760px){.contact-grid{grid-template-columns:1fr}}
 .contact-list{list-style:none;margin:1.1rem 0 0;padding:0}
 .contact-list li{display:flex;gap:.8rem;padding:.65rem 0;border-bottom:1px solid var(--line);font-size:.98rem}
-.contact-list .k{display:flex;align-items:center;gap:.45rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--teal);width:auto;min-width:130px;flex:none;padding-top:.15rem}
+.contact-list .k{display:flex;align-items:center;gap:.45rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--teal);width:auto;min-width:132px;flex:none;padding-top:.15rem}
 .contact-list .k svg{flex:none;width:16px;height:16px}
 
 /* ---------- CV ---------- */
@@ -214,7 +214,7 @@ main{display:block}
 .foot a{color:var(--teal)}
 .foot .fmono{font-family:var(--mono);font-size:.78rem;letter-spacing:.03em;color:var(--muted)}
 
-/* ---------- reveal disabled (static, traditional) ---------- */
+/* ---------- reveal disabled (static) ---------- */
 .js .reveal{opacity:1;transform:none}
 
 :focus-visible{outline:2px solid var(--teal);outline-offset:2px}
