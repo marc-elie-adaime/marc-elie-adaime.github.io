@@ -194,7 +194,8 @@ main{display:block}
 @media (max-width:760px){.contact-grid{grid-template-columns:1fr}}
 .contact-list{list-style:none;margin:1.1rem 0 0;padding:0}
 .contact-list li{display:flex;gap:.8rem;padding:.65rem 0;border-bottom:1px solid var(--line);font-size:.98rem}
-.contact-list .k{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--amber-deep);width:96px;flex:none;padding-top:.2rem}
+.contact-list .k{display:flex;align-items:center;gap:.45rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--teal);width:auto;min-width:130px;flex:none;padding-top:.15rem}
+.contact-list .k svg{flex:none;width:16px;height:16px}
 
 /* ---------- CV ---------- */
 .cv-section{margin-bottom:2.2rem}
