@@ -104,10 +104,9 @@ a:hover{color:var(--amber-deep)}
 .hero{position:relative;overflow:hidden;background:var(--teal-deep);color:var(--paper)}
 .hero-bg{
   position:absolute;inset:0;
-  /* PLACEHOLDER photo — replace with images/hero.jpg */
   background:
     linear-gradient(180deg, rgba(10,58,62,.72), rgba(10,58,62,.92)),
-    url("https://picsum.photos/seed/arctic-lake-core/1600/1000") center/cover;
+    url("Figures_webpage/42AB4789-EB84-4979-86F3-8EF3447E7F28.JPG") center/cover;
   filter:saturate(.85);
 }
 .hero-inner{position:relative;max-width:var(--maxw);margin:0 auto;padding:clamp(3.5rem,9vw,7rem) clamp(1.2rem,4vw,2.5rem)}
