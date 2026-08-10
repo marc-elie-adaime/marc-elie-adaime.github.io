@@ -4,21 +4,15 @@
 <script>document.documentElement.classList.add("js")</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Marc-Élie Adaime | Computational Biology, Evolution, Ecology </title>
-<meta name="description" content="Marc-Élie Adaime | Postdoctoral Research Fellow at the Smithsonian Institution. Computational Biology, phylogenetics, evolutionary theory, and paleoecology, from Arctic lakes to plant evolution.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<title>Marc-Élie Adaime | Computational Biology, Evolution &amp; Ecology</title>
+<meta name="description" content="Marc-Élie Adaime, Postdoctoral Research Fellow at the Smithsonian Institution. Machine learning and phylogenetics applied to plant evolution and ecosystem change.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
   <nav class="nav" aria-label="Primary">
-    <a class="brand" href="index.html">
-      <b>Marc-Élie Adaime</b>
-      <span>Evolution · Computational Biology · Phylogenetics · Paleoecology · Biodiversity Informatics</span>
-    </a>
+    <a class="brand" href="index.html"><b>Marc-Élie Adaime</b><span>Evolution · Computational Biology · Phylogenetics · Paleoecology · Biodiversity Informatics</span></a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="menu">
       <li><a href="index.html" aria-current="page">Home</a></li>
@@ -34,25 +28,26 @@
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="hero-inner">
     <p class="eyebrow">Postdoctoral Research Fellow · Smithsonian Institution</p>
-    <h1>Decoding evolutionary and ecological signal from plant morphology and molecular data.</h1>
-    <p>I develop and apply phylogenetic and machine learning methods to study the deep evolutionary history of major plant clades and the response of ecosystems to climate, from postglacial change across the high Arctic and East African grasslands to the diversification of the world's conifers, working across records that range from entire sediment cores to the architecture of a single pollen grain.</p>
-    <p class="role">Chief Data and AI Office · Office of Digital &amp; Innovation · Smithsonian Institution · Washington, D.C.</p>
+    <h1>Decoding evolutionary and ecological signal from plant form and DNA.</h1>
+    <p>I develop and apply machine-learning and phylogenetic methods to study the deep evolutionary history of major plant clades and the response of ecosystems to climate, from millennia of change in the high Arctic and East African grasslands to the diversification of the world's conifers, across evidence spanning whole sediment cores to a single pollen grain.</p>
+    <p class="role">Smithsonian Institution · Washington, D.C.</p>
     <div class="btn-row">
-      <a class="btn btn-primary" href="research.html">See research →</a>
+      <a class="btn btn-primary" href="research.html">Explore the research →</a>
       <a class="btn btn-ghost" href="publications.html">Publications</a>
     </div>
   </div>
 </section>
 
-<div class="strata" role="presentation"></div>
+<hr class="strata">
 
-<!-- INTRO -->
+<!-- ABOUT -->
 <section class="section">
   <div class="wrap">
     <p class="eyebrow reveal">About</p>
+    <h2 class="reveal">A path from the Arctic to plant evolution, held together by computation.</h2>
     <div class="prose reveal">
-      <p class="lead">My work spans the evolution and adaptation of key lineages across Earth's history and the study of past and present-day species communities responding to environmental change, using a shared set of computational and statistical methods.</p>
-      <p>I trained first as a Quaternary paleoecologist in Québec, reconstructing postglacial environments from Arctic lake sediments. My doctoral work turned to deep learning, training neural networks to extract phylogenetic and ecological signal from pollen morphology. At the Smithsonian, I now integrate the machine-learning methods we develop with forest-plot occurrence data and molecular and anatomical evidence to ask how plant lineages diversify, how they adapt to particular climatic zones, and why certain morphological traits arise, with much of this work focused on conifers.</p>
+      <p class="lead">My research combines phylogenetics, image analysis, evolutionary theory, and paleoecology. The unifying goal is to read biodiversity dynamics, trait evolution, and environmental change from the incomplete evidence organisms leave behind: sediments, sequences, and the complex shapes of fossilized life-forms, mainly plants.</p>
+      <p>I trained first as a Quaternary paleoecologist in Québec, reconstructing postglacial environments from Arctic lake sediments. My doctoral work turned to deep learning, training neural networks to extract phylogenetic and ecological signal from the morphology of pollen. Today at the Smithsonian I combine these threads, molecular phylogenetics, morphological data, and machine learning, to study how plant lineages diversify and adapt.</p>
     </div>
   </div>
 </section>
@@ -60,35 +55,35 @@
 <!-- THREE THREADS -->
 <section class="section alt">
   <div class="wrap">
-    <p class="eyebrow reveal">Current work</p>
-    <p class="lead reveal">Some questions that drive my current work: how lineages evolve over time, and how ecosystems change in response to environmental shifts, along with the methods that allow us to answer both.</p>
+    <p class="eyebrow reveal">Current directions</p>
+    <h2 class="reveal">Three research threads</h2>
+    <p class="lead reveal">Two questions about how life and ecosystems change over time, and the methods that make both possible to answer.</p>
     <div class="grid cols-3" style="margin-top:2rem">
-      
 
       <article class="card reveal">
-        <div class="fig">
-          <img src="Figures_webpage/IMG_9360.JPG" style="width:100%;height:auto;display:block">
+        <div class="fig" style="margin:0 0 1.1rem;padding:.5rem;background:var(--sage);border-radius:3px">
+          <img src="Figures_webpage/Fig_5_MCC_Podocarp_Ages.png" alt="Time-calibrated phylogeny of Podocarpus" style="width:100%;height:auto;display:block;border-radius:2px">
         </div>
-        <span class="num">01 / EVOLUTION</span>
+        <span class="num">EVOLUTION</span>
         <h3>Evolution and adaptation across deep time</h3>
-        <p>Why do lineages evolve the traits they do? I use phylogenetics, evolutionary simulation, and trait analysis in plant groups like conifers to trace how form responds to environment, from pollen walls that thicken under higher UV to shield DNA, to the puzzling, repeated evolution of fleshy cones. The goal is to connect a trait to the factors that shape it, from environmental pressures to selection to changes in the genome.</p>
-      </article>      
+        <p>Why do lineages evolve the traits they do? I use phylogenetics, evolutionary simulation, and trait analysis in plant groups like conifers to trace how form responds to environment, from pollen walls that thicken under higher UV to shield DNA, to the puzzling, repeated evolution of fleshy cones. The goal is to connect a trait to its drivers, from environmental pressures to selection to changes in the genome.</p>
+      </article>
 
       <article class="card reveal">
-        <div class="fig">
-          <img src="Figures_webpage/WHL_Sediment_Core.png" alt="Ward Hunt Lake sediment core" style="width:100%;height:auto;display:block">
+        <div class="fig" style="margin:0 0 1.1rem;padding:.5rem;background:var(--sage);border-radius:3px">
+          <img src="Figures_webpage/WHL_Sediment_Core.png" alt="Ward Hunt Lake sediment core" style="width:100%;height:auto;display:block;border-radius:2px">
         </div>
-        <span class="num">02 / ECOLOGICAL CHANGE</span>
+        <span class="num">ECOLOGICAL CHANGE</span>
         <h3>Ecosystems and environmental change</h3>
         <p>How do ecosystems respond to a changing climate? The same question runs from the extreme cold of the Canadian High Arctic to the warm tropics of East Africa, with different data and hypotheses. Using species identification from eDNA and morphology alongside geochemistry, I reconstruct past biological communities, how their diversity changed over time, and what the climate and environment looked like.</p>
       </article>
 
       <article class="card reveal">
-        <div class="fig">
-          <img src="Figures_webpage/IMG_9364.JPG" alt="Pollen imaging and analysis" style="width:100%;height:auto;display:block">
+        <div class="fig" style="margin:0 0 1.1rem;padding:.5rem;background:var(--sage);border-radius:3px">
+          <img src="Figures_webpage/IMG_9364.JPG" alt="Pollen imaging and analysis" style="width:100%;height:auto;display:block;border-radius:2px">
         </div>
-        <span class="num">03 / METHODS</span>
-        <h3>New methods needed for testing evolutionary and ecological hypotheses</h3>
+        <span class="num">METHODS</span>
+        <h3>The methods that make it possible</h3>
         <p>Both questions depend on detecting signals almost too subtle to see. I develop statistical and computational methods, including signal processing and deep learning, that quantify fine-grained phenotypic variation in structures like pollen and cones. This turns shape into rigorous evidence, resolving phylogenetic placement, revealing speciation and extinction events, and catching the small community shifts that mark major ecosystem change.</p>
       </article>
 
@@ -96,15 +91,16 @@
   </div>
 </section>
 
-<!-- SNAPSHOT / CTA -->
+<!-- FIELD TO MODEL -->
 <section class="section">
   <div class="wrap">
     <div class="grid cols-2" style="align-items:center;gap:2.5rem">
       <div class="reveal">
-        <h2>From field to computational models</h2>
+        <p class="eyebrow">Approach</p>
+        <h2>From field to model</h2>
         <div class="prose">
-          <p>My work runs from field data collection to the analysis of complex biological data, both morphological and molecular, using established techniques alongside the new statistical and computational methods we develop.</p>
-          <p>Beginning January 2027, I join the American University of Beirut as Assistant Professor of Bioinformatics and Computational Biology. There I'll extend this program to the biodiversity of the eastern Mediterranean, studying the adaptation and evolution of key species and developing new methods for phylogenetic inference and diversity estimation. I will also continue my work on polar and tropical ecosystems through established collaborations.</p>
+          <p>My work runs from collecting data in the field to analyzing complex biological data, both morphological and molecular, using established techniques alongside the new statistical and computational methods we develop.</p>
+          <p>Beginning January 2027, I join the American University of Beirut as Assistant Professor of Bioinformatics and Computational Biology, extending this program to the biodiversity of Lebanon and the eastern Mediterranean.</p>
         </div>
         <div class="btn-row">
           <a class="btn btn-primary" href="cv.html">View CV →</a>
@@ -112,11 +108,8 @@
         </div>
       </div>
       <figure class="plate reveal">
-        <div class="img">
-          <!-- PLACEHOLDER — replace src with images/fieldwork.jpg -->
-          <img src="Figures_webpage/IMG_20220724_194312.jpg">
-        </div>
-        <figcaption><b>Plate 01</b> — Field sampling · Ellesmere Island · Canadian High Arctic</figcaption>
+        <div class="img"><img src="Figures_webpage/IMG_20220724_194312.jpg" alt="Field sampling in the Canadian High Arctic"></div>
+        <figcaption>Ellesmere Island, Canadian High Arctic · July 2022</figcaption>
       </figure>
     </div>
   </div>
@@ -124,22 +117,14 @@
 
 <footer class="site-footer">
   <div class="foot">
-    <div class="brand">
-      <b style="font-family:var(--display);font-size:1.05rem">Marc-Élie Adaime, Ph.D.</b><br>
-      <span class="fmono">Smithsonian Institution · Data Science Lab</span>
-    </div>
-    <div class="fmono">
-      <a href="mailto:meadaime@gmail.com">meadaime@gmail.com</a> ·
-      <a href="https://github.com/marc-elie-adaime">GitHub</a>
-    </div>
+    <div class="brand"><b style="font-family:var(--display);font-size:1.05rem">Marc-Élie Adaime, Ph.D.</b><br><span class="fmono">Smithsonian Institution · Washington, D.C.</span></div>
+    <div class="fmono"><a href="mailto:meadaime@gmail.com">meadaime@gmail.com</a> · <a href="https://github.com/marc-elie-adaime">GitHub</a></div>
   </div>
 </footer>
 
 <script>
-  // mobile nav
   const t=document.querySelector('.nav-toggle'),m=document.getElementById('menu');
   t&&t.addEventListener('click',()=>{const o=m.classList.toggle('open');t.setAttribute('aria-expanded',o)});
-  // scroll reveal
   const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
