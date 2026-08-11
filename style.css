@@ -238,3 +238,10 @@ main{display:block}
   .threads-grid .plate img{width:100% !important;max-width:100% !important;}
   .threads-grid .plate figcaption{width:100% !important;max-width:100% !important;}
 }
+
+/* Research page header background */
+.hero-research .hero-bg{
+  background:
+    linear-gradient(180deg, rgba(20,58,107,.7), rgba(20,58,107,.68)),
+    url("Figures_webpage/34EDEE50-22E7-4DC9-A96A-1D87A14C8290.jpg") center/cover;
+}
