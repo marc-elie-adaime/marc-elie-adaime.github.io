@@ -219,10 +219,16 @@ main{display:block}
 
 :focus-visible{outline:2px solid var(--teal);outline-offset:2px}
 
-/* ---------- About section: stack on mobile ---------- */
+/* ---------- Mobile adjustments ---------- */
 @media (max-width:760px){
+  /* About section: stack on mobile */
   .about-grid{grid-template-columns:1fr !important;}
   .about-grid .prose{max-width:100% !important;}
   .about-core img{max-width:100% !important;}
   .about-core figcaption{max-width:100% !important;}
+
+  /* Threads figures: cancel the margin bleed on mobile */
+  .bleed-right{margin-right:0 !important;}
+  .bleed-left{margin-left:0 !important;}
+  .cap-wide{width:100% !important;}
 }
