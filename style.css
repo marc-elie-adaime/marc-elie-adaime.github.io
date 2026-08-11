@@ -224,17 +224,15 @@ main{display:block}
   /* About section: stack on mobile */
   .about-grid{grid-template-columns:1fr !important;}
   .about-grid .prose{max-width:100% !important;}
-  .about-core img{max-width:100% !important;}
+  .about-core{width:100% !important;}
+  .about-core img{max-width:100% !important;width:100% !important;}
   .about-core figcaption{max-width:100% !important;}
-
   /* Threads figure rows: force single column, full width */
   .threads-grid{grid-template-columns:1fr !important;}
-
   /* Cancel the desktop margin bleed and caption-width hacks */
   .bleed-right{margin-right:0 !important;}
   .bleed-left{margin-left:0 !important;}
   .cap-wide{width:100% !important;}
-
   /* Make every threads figure full-width and its caption normal */
   .threads-grid .plate{margin:0 !important;width:100% !important;}
   .threads-grid .plate img{width:100% !important;max-width:100% !important;}
