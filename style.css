@@ -142,7 +142,6 @@ main{display:block}
 .grid.cols-3{grid-template-columns:repeat(3,1fr)}
 @media (max-width:860px){.grid.cols-3{grid-template-columns:1fr 1fr}}
 @media (max-width:620px){.grid.cols-2,.grid.cols-3{grid-template-columns:1fr}}
-
 .card{
   background:var(--white);border:1px solid var(--line);border-radius:4px;
   padding:1.4rem;
@@ -151,8 +150,9 @@ main{display:block}
 .card .num{font-family:var(--mono);font-size:.72rem;color:var(--amber-deep);letter-spacing:.08em;text-transform:uppercase}
 .card h3{font-family:var(--display);font-weight:700;font-size:1.22rem;margin:.45rem 0 .5rem;line-height:1.25}
 .card p{margin:0;color:#2a3550;font-size:.98rem}
-.card .fig{margin:0 0 1.1rem;padding:.5rem;background:var(--sage);border-radius:3px}
+.card .fig{margin:0 0 1.1rem;background:transparent;border-radius:3px}
 .card .fig img,.card .fig svg{display:block;width:100%;height:auto;border-radius:2px}
+.card img{border-radius:3px}
 
 /* ---------- figure / plate ---------- */
 .plate{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--white)}
@@ -218,3 +218,11 @@ main{display:block}
 .js .reveal{opacity:1;transform:none}
 
 :focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+
+/* ---------- About section: stack on mobile ---------- */
+@media (max-width:760px){
+  .about-grid{grid-template-columns:1fr !important;}
+  .about-grid .prose{max-width:100% !important;}
+  .about-core img{max-width:100% !important;}
+  .about-core figcaption{max-width:100% !important;}
+}
