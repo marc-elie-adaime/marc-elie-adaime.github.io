@@ -274,10 +274,10 @@ main{display:block}
 }
 
 /* Research page: field photo column beside the timeline */
-.field-photos{display:flex;flex-direction:column;gap:1.6rem}
+.field-photos{display:flex;flex-direction:column;gap:2.5rem}
 .field-photos img{
   width:100%;
-  max-width:100px;
+  max-width:90px;
   height:auto;
   border-radius:4px;
   display:block;
