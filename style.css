@@ -238,10 +238,31 @@ main{display:block}
   .threads-grid .plate img{width:100% !important;max-width:100% !important;}
   .threads-grid .plate figcaption{width:100% !important;max-width:100% !important;}
 }
-
 /* Research page header background */
 .hero-research .hero-bg{
   background:
     linear-gradient(180deg, rgba(20,58,107,.7), rgba(20,58,107,.68)),
     url("Figures_webpage/34EDEE50-22E7-4DC9-A96A-1D87A14C8290.jpg") center/cover;
 }
+/* Contact page: reset right-column shift on mobile */
+@media (max-width:760px){
+  .contact-grid > .reveal:last-child{
+    margin-left:0 !important;
+    margin-top:0 !important;
+  }
+}
+
+/* Mobile header spacing */
+@media (max-width:760px){
+  /* Brand subtitle: more space between wrapped lines */
+  .brand span{line-height:1.5;}
+  /* Dropdown menu items: more tap space, remove touching underlines */
+  .nav-links a{
+    padding:.9rem 0 !important;
+    border-bottom:1px solid var(--line) !important;
+  }
+  .nav-links a[aria-current="page"]{
+    border-bottom-color:var(--line) !important;
+  }
+}
+
