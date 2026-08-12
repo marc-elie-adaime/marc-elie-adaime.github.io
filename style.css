@@ -283,7 +283,7 @@ main{display:block}
 }
 .field-photos img{
   width:100%;
-  max-width:200px;
+  max-width:220px;
   height:auto;
   border-radius:4px;
   display:block;
@@ -294,7 +294,7 @@ main{display:block}
 
 /* Mobile: stack timeline above, photos below in a 2-col grid */
 @media (max-width:760px){
-  .training-grid{grid-template-columns:1fr !important;gap:2rem !important;}
+  .training-grid{grid-template-columns:1fr !important;gap:1.8rem !important;}
   .field-photos{
     flex-direction:row !important;
     flex-wrap:wrap !important;
