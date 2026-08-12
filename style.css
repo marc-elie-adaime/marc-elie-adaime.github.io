@@ -274,7 +274,13 @@ main{display:block}
 }
 
 /* Research page: field photo column beside the timeline */
-.field-photos{display:flex;flex-direction:column;gap:2rem}
+.field-photos{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  height:100%;
+  padding:1rem 0;
+}
 .field-photos img{
   width:100%;
   max-width:150px;
