@@ -273,3 +273,32 @@ main{display:block}
   }
 }
 
+/* Research page: field photo column beside the timeline */
+.field-photos{display:flex;flex-direction:column;gap:1.6rem}
+.field-photos img{
+  width:100%;
+  max-width:260px;
+  height:auto;
+  border-radius:4px;
+  display:block;
+}
+/* Alternate the photos left/right within the column */
+.field-photos img:nth-child(odd){margin-left:auto}
+.field-photos img:nth-child(even){margin-right:auto}
+
+/* Mobile: stack timeline above, photos below in a 2-col grid */
+@media (max-width:760px){
+  .training-grid{grid-template-columns:1fr !important;gap:2rem !important;}
+  .field-photos{
+    flex-direction:row !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    gap:1rem !important;
+  }
+  .field-photos img{
+    width:calc(50% - .5rem) !important;
+    max-width:none !important;
+    margin:0 !important;
+  }
+}
+
