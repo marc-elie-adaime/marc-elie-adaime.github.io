@@ -256,13 +256,10 @@ main{display:block}
 @media (max-width:760px){
   /* Brand subtitle: more space between wrapped lines */
   .brand span{line-height:1.5;}
-  /* Dropdown menu items: more tap space, remove touching underlines */
+  /* Dropdown menu items: more tap space, no dividers */
   .nav-links a{
-    padding:.9rem 0 !important;
-    border-bottom:1px solid var(--line) !important;
-  }
-  .nav-links a[aria-current="page"]{
-    border-bottom-color:var(--line) !important;
+    padding:1.3rem 0 !important;
+    border-bottom:none !important;
   }
 }
 
