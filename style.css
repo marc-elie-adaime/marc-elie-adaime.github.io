@@ -277,7 +277,7 @@ main{display:block}
 .field-photos{display:flex;flex-direction:column;gap:1.6rem}
 .field-photos img{
   width:100%;
-  max-width:260px;
+  max-width:100px;
   height:auto;
   border-radius:4px;
   display:block;
