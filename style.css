@@ -244,22 +244,24 @@ main{display:block}
     linear-gradient(180deg, rgba(20,58,107,.7), rgba(20,58,107,.68)),
     url("Figures_webpage/34EDEE50-22E7-4DC9-A96A-1D87A14C8290.jpg") center/cover;
 }
-/* Contact page: reset right-column shift on mobile */
+/* Contact page: reset right-column shift on mobile, center photos */
 @media (max-width:760px){
   .contact-grid > .reveal:last-child{
     margin-left:0 !important;
     margin-top:0 !important;
+    align-items:center !important;
   }
 }
-
 /* Mobile header spacing */
 @media (max-width:760px){
   /* Brand subtitle: more space between wrapped lines */
   .brand span{line-height:1.5;}
-  /* Dropdown menu items: more tap space, no dividers */
+  /* Dropdown menu: space items, no dividers, no tap highlight */
+  .nav-links{gap:.9rem !important;}
   .nav-links a{
-    padding:1.3rem 0 !important;
+    padding:.6rem 0 !important;
     border-bottom:none !important;
+    -webkit-tap-highlight-color:transparent !important;
   }
 }
 
