@@ -1,28 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<script>document.documentElement.classList.add("js")</script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact — Marc-Élie Adaime</title>
-<meta name="description" content="Contact Marc-Élie Adaime, Postdoctoral Research Fellow at the Smithsonian Institution.">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="site-header">
-  <nav class="nav" aria-label="Primary">
-    <a class="brand" href="index.html"><b>Marc-Élie Adaime</b><span>Evolution · Computational Biology · Phylogenetics · Paleoecology · Biodiversity Informatics</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
-    <ul class="nav-links" id="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="contact.html" aria-current="page">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
 <section class="section" style="padding-top:clamp(2.5rem,6vw,4rem)">
   <div class="wrap">
     <div class="contact-grid">
@@ -60,30 +35,16 @@
           <figcaption style="font-family:var(--mono);font-size:.74rem;letter-spacing:.02em;color:var(--muted);margin-top:.6rem">Part of our research team during a field expedition, on a ridge above a glacier in the Krieger Mountains near Oobloyah Bay, Ellesmere Island, Nunavut, Canada · 80°52′N, 82°50′W · Drone photo by Akira S. Mori</figcaption>
         </figure>
       </div>
-      <div class="reveal" style="display:flex;flex-direction:column;gap:1.6rem;margin-left:1.5rem;margin-top:2.5rem">
+      <div class="reveal" style="display:flex;flex-direction:column;gap:1.6rem;margin-left:1.5rem;margin-top:4rem">
         <figure class="plate" style="margin:0;border:none;background:transparent">
           <img src="Figures_webpage/IMG_20220717_134438.jpg" alt="Field site on Ellesmere Island, Canadian High Arctic" style="width:100%;max-width:320px;height:auto;display:block;border-radius:4px">
           <figcaption style="font-family:var(--mono);font-size:.74rem;letter-spacing:.02em;color:var(--muted);margin-top:.6rem">Ellesmere Island, Nunavut · Canadian High Arctic · July 2022</figcaption>
         </figure>
         <figure class="plate" style="margin:0;border:none;background:transparent">
-          <img src="Figures_webpage/IMG_4022.jpg" alt="Barro Colorado Island, Panamá" style="width:100%;max-width:320px;height:auto;display:block;border-radius:4px">
+          <img src="Figures_webpage/IMG_4022.jpg" alt="Barro Colorado Island, Panamá" style="width:100%;max-width:270px;height:auto;display:block;border-radius:4px">
           <figcaption style="font-family:var(--mono);font-size:.74rem;letter-spacing:.02em;color:var(--muted);margin-top:.6rem">Barro Colorado Island, Panamá · Smithsonian Tropical Research Institute · March 2026</figcaption>
         </figure>
       </div>
     </div>
   </div>
 </section>
-<footer class="site-footer">
-  <div class="foot">
-    <div class="brand"><b style="font-family:var(--display);font-size:1.05rem">Marc-Élie Adaime, Ph.D.</b><br><span class="fmono">Smithsonian Institution · Washington, D.C.</span></div>
-    <div class="fmono"><a href="mailto:meadaime@gmail.com">meadaime@gmail.com</a> · <a href="https://github.com/marc-elie-adaime">GitHub</a></div>
-  </div>
-</footer>
-<script>
-  const t=document.querySelector('.nav-toggle'),m=document.getElementById('menu');
-  t&&t.addEventListener('click',()=>{const o=m.classList.toggle('open');t.setAttribute('aria-expanded',o)});
-  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script>
-</body>
-</html>
