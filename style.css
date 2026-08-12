@@ -251,6 +251,14 @@ main{display:block}
     margin-top:0 !important;
     align-items:center !important;
   }
+  .contact-grid > .reveal:last-child figure{
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  .contact-grid > .reveal:last-child img{
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
 }
 /* Mobile header spacing */
 @media (max-width:760px){
