@@ -1,3 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>document.documentElement.classList.add("js")</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Marc-Élie Adaime</title>
+<meta name="description" content="Contact Marc-Élie Adaime, Postdoctoral Research Fellow at the Smithsonian Institution.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="index.html"><b>Marc-Élie Adaime</b><span>Evolution · Computational Biology · Phylogenetics · Paleoecology · Biodiversity Informatics</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 <section class="section" style="padding-top:clamp(2.5rem,6vw,4rem)">
   <div class="wrap">
     <div class="contact-grid">
@@ -48,3 +72,17 @@
     </div>
   </div>
 </section>
+<footer class="site-footer">
+  <div class="foot">
+    <div class="brand"><b style="font-family:var(--display);font-size:1.05rem">Marc-Élie Adaime, Ph.D.</b><br><span class="fmono">Smithsonian Institution · Washington, D.C.</span></div>
+    <div class="fmono"><a href="mailto:meadaime@gmail.com">meadaime@gmail.com</a> · <a href="https://github.com/marc-elie-adaime">GitHub</a></div>
+  </div>
+</footer>
+<script>
+  const t=document.querySelector('.nav-toggle'),m=document.getElementById('menu');
+  t&&t.addEventListener('click',()=>{const o=m.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
