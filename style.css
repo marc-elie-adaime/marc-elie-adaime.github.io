@@ -96,7 +96,7 @@ a:hover{color:var(--teal-deep)}
 .hero-bg{
   position:absolute;inset:0;
   background:
-    linear-gradient(180deg, rgba(20, 60, 40, .7), rgba(20, 60, 40,.68)),     
+    linear-gradient(180deg, rgba(20,58,107, .7), rgba(20,58,107,.68)),     
     url("Figures_webpage/IMG_20220718_154814%20Copy-b.jpg") center/cover;
 }
 .hero-inner{position:relative;max-width:var(--maxw);margin:0 auto;padding:clamp(2rem,4vw,3rem) clamp(1.2rem,4vw,2.2rem)}
@@ -253,7 +253,7 @@ main{display:block}
 /* Research page header background */
 .hero-research .hero-bg{
   background:
-    linear-gradient(180deg, rgba(25,35,30,.78), rgba(25,35,30,.76)),
+    linear-gradient(180deg, rgba(17,50,68,.80), rgba(17,50,68,.80)),
     url("Figures_webpage/34EDEE50-22E7-4DC9-A96A-1D87A14C8290.jpg") center top/cover;
 }
 /* Contact page: reset right-column shift on mobile, center photos */
