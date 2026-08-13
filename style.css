@@ -99,7 +99,7 @@ a:hover{color:var(--teal-deep)}
     linear-gradient(180deg, rgba(20,58,107,.7), rgba(20,58,107,.68)),     
     url("Figures_webpage/IMG_20220718_154814%20Copy-b.jpg") center/cover;
 }
-.hero-inner{position:relative;max-width:var(--maxw);margin:0 auto;padding:clamp(3rem,7vw,5.5rem) clamp(1.2rem,4vw,2.2rem)}
+.hero-inner{position:relative;max-width:var(--maxw);margin:0 auto;padding:clamp(2rem,4vw,3rem) clamp(1.2rem,4vw,2.2rem)}
 .hero .eyebrow{color:#bcd0e8}
 .hero h1{
   font-family:var(--display);font-weight:700;
