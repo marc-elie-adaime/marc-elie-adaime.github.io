@@ -121,8 +121,9 @@ a:hover{color:var(--teal-deep)}
 .btn-ghost:hover{border-color:#fff;color:#fff}
 
 .hero-portrait{
-  width:110px;
-  height:110px;
+  width:110px !important;
+  height:110px !important;
+  max-width:110px !important;
   border-radius:50%;
   object-fit:cover;
   display:block;
