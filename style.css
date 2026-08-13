@@ -283,13 +283,13 @@ main{display:block}
 }
 .field-photos img{
   width:100%;
-  max-width:195px;
+  max-width:200px;
   height:auto;
-  border-radius:4px;
+  border-radius:6px;
   display:block;
 }
 .field-photos img:last-child{
-  max-width:300px;
+  max-width:320px;
 }
 /* Alternate the photos left/right within the column */
 .field-photos img:nth-child(odd){margin-left:auto}
