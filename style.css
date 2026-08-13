@@ -253,7 +253,7 @@ main{display:block}
 /* Research page header background */
 .hero-research .hero-bg{
   background:
-    linear-gradient(180deg, rgba(17,50,68,.80), rgba(17,50,68,.80)),
+    linear-gradient(180deg, rgba(17,50,68,.82), rgba(17,50,68,.8)),
     url("Figures_webpage/34EDEE50-22E7-4DC9-A96A-1D87A14C8290.jpg") center top/cover;
 }
 /* Contact page: reset right-column shift on mobile, center photos */
