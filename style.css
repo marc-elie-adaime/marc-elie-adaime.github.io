@@ -1,18 +1,18 @@
 /* =========================================================
-   Marc-Élie Adaime — traditional academic styles
-   Single-hue Québec-blue palette; system serif typography.
+   Marc-Élie Adaime
+   Single-hue blue palette; system serif typography.
    ========================================================= */
 
 :root{
   --ink:#182338;            /* near-black, blue cast (body text) */
-  --teal:#1d4e89;           /* Québec blue (links, accents) */
+  --teal:#1d4e89;           /* blue (links, accents) */
   --teal-deep:#143a6b;      /* deep blue (hero, dark headings) */
   --teal-bright:#3d6fb0;    /* lighter blue */
-  --amber:#1d4e89;          /* primary buttons = Québec blue */
+  --amber:#1d4e89;          /* primary buttons = blue */
   --amber-deep:#3a4a63;     /* muted blue-grey small labels */
   --amber-soft:#bcd0e8;     /* soft blue (hover borders) */
   --paper:#ffffff;          /* main background */
-  --panel:#eaf0f8;          /* pale Québec blue (alt sections) */
+  --panel:#eaf0f8;          /* pale blue (alt sections) */
   --sage:#e0e9f5;           /* soft blue (chips, mats, plates) */
   --line:#cdd9ea;           /* blue-tinted borders */
   --muted:#54617a;          /* muted blue-grey text */
