@@ -121,11 +121,12 @@ a:hover{color:var(--teal-deep)}
 .btn-ghost:hover{border-color:#fff;color:#fff}
 
 .hero-portrait{
-  width:150px !important;
-  height:150px !important;
-  max-width:150px !important;
+  width:160px !important;
+  height:160px !important;
+  max-width:160px !important;
   border-radius:50% !important;
   object-fit:cover;
+  object-position:center center;
   display:block;
   margin:0 0 1.4rem;
   border:3px solid rgba(255,255,255,.9);
