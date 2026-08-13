@@ -312,7 +312,7 @@ main{display:block}
 /* Publications header figure: stack on mobile */
 @media (max-width:760px){
   .pub-header-grid{grid-template-columns:1fr !important;}
-  .pub-header-fig{margin-top:0.5rem !important;}
+  .pub-header-fig{margin-top:0 !important;}
   .pub-header-fig img{margin-left:0 !important;max-width:100% !important;}
   .pub-header-fig figcaption{margin-left:0 !important;max-width:100% !important;}
 }
