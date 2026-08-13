@@ -96,7 +96,7 @@ a:hover{color:var(--teal-deep)}
 .hero-bg{
   position:absolute;inset:0;
   background:
-    linear-gradient(180deg, rgba(20,58,107,.7), rgba(20,58,107,.68)),     
+    linear-gradient(180deg, rgba(20, 60, 40, .7), rgba(20, 60, 40,.68)),     
     url("Figures_webpage/IMG_20220718_154814%20Copy-b.jpg") center/cover;
 }
 .hero-inner{position:relative;max-width:var(--maxw);margin:0 auto;padding:clamp(2rem,4vw,3rem) clamp(1.2rem,4vw,2.2rem)}
