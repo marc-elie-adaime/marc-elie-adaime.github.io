@@ -17,9 +17,9 @@
   --muted:#54617a;
   --white:#ffffff;
 
-  --display:Georgia,"Times New Roman",Times,serif;
-  --body:Georgia,"Times New Roman",Times,serif;
-  --mono:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --display:Arial,Helvetica,sans-serif;
+  --body:Arial,Helvetica,sans-serif;
+  --mono:Arial,Helvetica,sans-serif;
 
   --maxw:1080px;
 }
@@ -35,6 +35,7 @@ html{scroll-behavior:smooth}
 body{
   margin:0;
   font-family:var(--body);
+  font-size:1rem;
   color:var(--ink);
   background:var(--paper);
   line-height:1.62;
@@ -62,9 +63,9 @@ a:hover{color:var(--teal-deep)}
 
 .eyebrow{
   font-family:var(--mono);
-  font-size:.74rem;
-  letter-spacing:.12em;
-  text-transform:uppercase;
+  font-size:.875rem;
+  letter-spacing:normal;
+  text-transform:none;
   color:var(--muted);
   margin:0 0 .8rem;
 }
@@ -90,6 +91,7 @@ a:hover{color:var(--teal-deep)}
 }
 
 .brand{
+  min-width:0;
   display:flex;
   flex-direction:column;
   line-height:1.15;
@@ -105,14 +107,18 @@ a:hover{color:var(--teal-deep)}
 
 .brand span{
   font-family:var(--mono);
-  font-size:.62rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
+  font-size:.875rem;
+  letter-spacing:normal;
+  text-transform:none;
   color:var(--muted);
-  margin-top:9px;
+  margin-top:.4rem;
+  line-height:1.45;
 }
 
+.nav .brand{flex:1}
+
 .nav-links{
+  flex:none;
   display:flex;
   gap:1.1rem;
   align-items:center;
@@ -122,6 +128,7 @@ a:hover{color:var(--teal-deep)}
 }
 
 .nav-links a{
+  display:inline-block;
   font-family:var(--mono);
   font-size:.86rem;
   font-weight:400;
@@ -142,6 +149,7 @@ a:hover{color:var(--teal-deep)}
 }
 
 .nav-toggle{
+  flex:none;
   display:none;
   background:none;
   border:1px solid var(--line);
@@ -207,7 +215,12 @@ a:hover{color:var(--teal-deep)}
   padding:clamp(2rem,4vw,3rem) clamp(1.2rem,4vw,2.2rem);
 }
 
-.hero .eyebrow{color:#bcd0e8}
+.hero .eyebrow{
+  color:#d6e1ee;
+  font-size:.95rem;
+  font-weight:400;
+  line-height:1.5;
+}
 
 .hero h1{
   font-family:var(--display);
@@ -219,7 +232,7 @@ a:hover{color:var(--teal-deep)}
 }
 
 .hero p{
-  font-size:clamp(1.15rem,1.9vw,1.35rem);
+  font-size:clamp(1rem,1.9vw,1.15rem);
   max-width:60ch;
   color:#e6ecf5;
   margin:0 0 1.4rem;
@@ -229,7 +242,7 @@ a:hover{color:var(--teal-deep)}
 .hero .role{
   font-family:var(--mono);
   font-size:.9rem;
-  letter-spacing:.03em;
+  letter-spacing:normal;
   color:#b3c6df;
 }
 
@@ -297,7 +310,8 @@ main{display:block}
 
 .section.alt{background:var(--panel)}
 
-.section h2{
+.section h2,
+.section .page-title{
   font-family:var(--display);
   font-weight:700;
   font-size:clamp(1.5rem,3vw,2.1rem);
@@ -334,9 +348,16 @@ main{display:block}
 
 .grid{display:grid;gap:1.6rem}
 
-.grid.cols-2{grid-template-columns:repeat(2,1fr)}
+.grid > *,
+.contact-grid > *,
+.training-grid > *,
+.pub-header-grid > *,
+.cv-row > *,
+.pub > *{min-width:0}
 
-.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+.grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 
 @media (max-width:860px){
   .grid.cols-3{grid-template-columns:1fr 1fr}
@@ -358,10 +379,10 @@ main{display:block}
 
 .card .num{
   font-family:var(--mono);
-  font-size:.72rem;
+  font-size:.875rem;
   color:var(--amber-deep);
-  letter-spacing:.08em;
-  text-transform:uppercase;
+  letter-spacing:normal;
+  text-transform:none;
 }
 
 .card h3{
@@ -396,84 +417,124 @@ main{display:block}
 
 /* ---------- homepage news ---------- */
 
-/* Matches the space before the About section. */
 .news-section{
   padding:clamp(2.6rem,5.5vw,4.2rem) 0 0;
 }
 
+/* The panel stays the same height as announcements are added. */
 .news-card{
+  display:flex;
+  flex-direction:column;
   min-width:0;
+  height:22rem;
   padding:clamp(1.2rem,3vw,2rem);
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-left:4px solid var(--teal);
-  border-radius:6px;
-}
-
-.news-card .eyebrow{
-  text-transform:none;
-  letter-spacing:.04em;
-}
-
-.news-card h2{
-  color:var(--teal-deep);
-  font-family:var(--display);
-  font-size:clamp(1.35rem,2.8vw,1.8rem);
-  line-height:1.25;
-  margin:0 0 .8rem;
-}
-
-.news-copy{
-  margin:0;
-  max-width:78ch;
-  font-size:1.05rem;
-}
-
-.news-links{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:.75rem;
-  list-style:none;
-  margin:1.25rem 0 0;
-  padding:0;
-}
-
-.news-links li{
-  min-width:0;
-  display:flex;
-}
-
-.news-links a{
-  display:flex;
-  align-items:center;
-  width:100%;
-  min-height:48px;
-  padding:.8rem 1rem;
   background:var(--white);
   border:1px solid var(--line);
   border-radius:4px;
-  color:var(--teal-deep);
-  font-family:var(--mono);
-  font-size:.88rem;
-  line-height:1.45;
+  overflow:hidden;
+}
+
+.news-card > h2{
+  flex:none;
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:2rem;
+  font-weight:700;
+  line-height:1.2;
+  margin:0 0 1rem;
+}
+
+/* Only the announcements scroll; the News heading remains visible.
+   Containment prevents scrolling from continuing into the page at either end. */
+.news-scroll{
+  flex:1 1 0;
+  min-height:0;
+  min-width:0;
+  overflow-y:auto;
+  overflow-x:hidden;
+  overscroll-behavior-y:contain;
+  scrollbar-gutter:stable;
+  padding:0 .65rem 0 0;
+  font-family:var(--body);
+  font-size:1rem;
+  line-height:1.6;
+  overflow-wrap:break-word;
+}
+
+.news-scroll:focus-visible{
+  outline-offset:-2px;
+}
+
+.news-item{
+  padding:1rem 0;
+  border-top:1px solid var(--line);
+}
+
+.news-item:first-of-type{
+  padding-top:0;
+  border-top:0;
+}
+
+.news-item:last-child{padding-bottom:0}
+
+.news-item h3{
+  font-family:inherit;
+  font-size:1rem;
+  font-weight:700;
+  line-height:1.6;
+  margin:0 0 .35rem;
+}
+
+.news-item p,
+.news-copy{
+  font-family:inherit;
+  font-size:1rem;
+  line-height:1.6;
+  margin:0;
+}
+
+.news-item p + p{margin-top:.65rem}
+
+.news-item .news-date{
+  font-size:1rem;
+  color:var(--muted);
+  margin:0 0 .35rem;
+}
+
+.news-card .eyebrow{
+  font-size:1rem;
+  letter-spacing:normal;
+  text-transform:none;
+}
+
+.news-links{
+  list-style:none;
+  margin:.65rem 0 0;
+  padding:0;
+}
+
+.news-links li + li{margin-top:.35rem}
+
+.news-links a{
+  font-family:inherit;
+  font-size:1rem;
+  line-height:1.6;
   overflow-wrap:anywhere;
-  text-decoration:none;
 }
 
-.news-links a:hover{
-  background:var(--sage);
-  border-color:var(--teal-bright);
-}
+.news-links a span[aria-hidden="true"]{display:none}
 
-/* Hides the arrow spans if they remain in the HTML. */
-.news-links a span[aria-hidden="true"]{
-  display:none;
-}
-
-@media (max-width:760px){
-  .news-links{
-    grid-template-columns:1fr;
-  }
+.visually-hidden{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  clip-path:inset(50%);
+  white-space:nowrap;
+  border:0;
 }
 
 /* ---------- figure / plate ---------- */
@@ -501,8 +562,8 @@ main{display:block}
 
 .plate figcaption{
   font-family:var(--mono);
-  font-size:.74rem;
-  letter-spacing:.02em;
+  font-size:.875rem;
+  letter-spacing:normal;
   color:var(--muted);
 }
 
@@ -541,10 +602,10 @@ main{display:block}
 
 .timeline .when{
   font-family:var(--mono);
-  font-size:.74rem;
-  letter-spacing:.05em;
+  font-size:.875rem;
+  letter-spacing:normal;
   color:var(--amber-deep);
-  text-transform:uppercase;
+  text-transform:none;
 }
 
 .timeline h3{
@@ -601,9 +662,9 @@ main{display:block}
 .pub .tag{
   display:inline-block;
   font-family:var(--mono);
-  font-size:.66rem;
-  letter-spacing:.05em;
-  text-transform:uppercase;
+  font-size:.8rem;
+  letter-spacing:normal;
+  text-transform:none;
   background:var(--sage);
   color:var(--teal-deep);
   padding:.12rem .5rem;
@@ -671,14 +732,26 @@ main{display:block}
   font-size:.98rem;
 }
 
+.contact-list li > span:last-child{
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+
+@media (max-width:560px){
+  .contact-list li{
+    flex-direction:column;
+    gap:.3rem;
+  }
+}
+
 .contact-list .k{
   display:flex;
   align-items:center;
   gap:.45rem;
   font-family:var(--mono);
-  font-size:.72rem;
-  letter-spacing:.05em;
-  text-transform:uppercase;
+  font-size:.875rem;
+  letter-spacing:normal;
+  text-transform:none;
   color:var(--teal);
   width:auto;
   min-width:132px;
@@ -715,9 +788,9 @@ main{display:block}
 
 .cv-row .l{
   font-family:var(--mono);
-  font-size:.78rem;
+  font-size:.875rem;
   color:var(--amber-deep);
-  letter-spacing:.03em;
+  letter-spacing:normal;
 }
 
 .cv-row b{font-weight:700}
@@ -765,9 +838,15 @@ main{display:block}
 
 .foot .fmono{
   font-family:var(--mono);
-  font-size:.78rem;
-  letter-spacing:.03em;
+  font-size:.875rem;
+  letter-spacing:normal;
   color:var(--muted);
+}
+
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.9rem;
 }
 
 /* ---------- reveal disabled (static) ---------- */
