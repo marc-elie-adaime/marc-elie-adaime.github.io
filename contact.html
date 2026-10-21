@@ -11,8 +11,8 @@
 <body>
 <header class="site-header">
   <nav class="nav" aria-label="Primary">
-    <a class="brand" href="index.html"><b>Marc-Élie Adaime</b><span>Evolution · Computational Biology · Phylogenetics · Paleoecology · Biodiversity Informatics</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a class="brand" href="index.html"><b>Marc-Élie Adaime</b><span>Evolution, computational biology, phylogenetics, paleoecology, and biodiversity informatics</span></a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="research.html">Research</a></li>
@@ -22,11 +22,13 @@
     </ul>
   </nav>
 </header>
+
+<main id="main-content">
 <section class="section" style="padding-top:clamp(2.5rem,6vw,4rem)">
   <div class="wrap">
     <div class="contact-grid">
       <div class="reveal">
-        <p class="eyebrow">Contact</p>
+        <h1 class="page-title">Contact</h1>
         <p class="lead">I am always glad to hear from collaborators, students, and colleagues working across evolution, computational biology, systematics, and (paleo)ecology. From January 2027, I will be joining the Department of Biology at the American University of Beirut (AUB). Feel free to reach out!</p>
         <ul class="contact-list">
           <li>
@@ -56,33 +58,40 @@
         </ul>
         <figure class="plate" style="margin:3.5rem 0 0;border:none;background:transparent">
           <img src="Figures_webpage/Ellesmere_drone_photo.png" alt="Research team on a ridge above a glacier in the Krieger Mountains, Ellesmere Island" style="width:100%;max-width:420px;height:auto;display:block;border-radius:4px">
-          <figcaption style="font-family:var(--mono);font-size:.74rem;letter-spacing:.02em;color:var(--muted);margin-top:.6rem">Members of our research team during one of our field expeditions, on a ridge above a glacier at Oobloyah Bay, Ellesmere Island, Canadian High Arctic · 80°52′N, 82°50′W · Still from drone footage by Akira S. Mori · July 2022</figcaption>
+          <figcaption style="color:var(--muted);margin-top:.6rem">Members of our research team during one of our field expeditions, on a ridge above a glacier at Oobloyah Bay, Ellesmere Island, Canadian High Arctic (80°52′N, 82°50′W). Still from drone footage by Akira S. Mori, July 2022.</figcaption>
         </figure>
       </div>
       <div class="reveal" style="display:flex;flex-direction:column;gap:1.6rem;margin-left:2.5rem;margin-top:2rem">
         <figure class="plate" style="margin:0;border:none;background:transparent">
-          <img src="Figures_webpage/IMG_20220717_134438.jpg" alt="View of our field camp on the foreland of Arklio Glacier, Ellesmere Island, in the Canadian High Arctic · July 2022" style="width:100%;max-width:320px;height:auto;display:block;border-radius:4px">
-          <figcaption style="font-family:var(--mono);font-size:.74rem;letter-spacing:.02em;color:var(--muted);margin-top:.6rem">View of our field camp on the foreland of Arklio Glacier, Ellesmere Island, in the Canadian High Arctic · July 2022</figcaption>
+          <img src="Figures_webpage/IMG_20220717_134438.jpg" alt="View of our field camp on the foreland of Arklio Glacier, Ellesmere Island, in the Canadian High Arctic, July 2022" style="width:100%;max-width:320px;height:auto;display:block;border-radius:4px">
+          <figcaption style="color:var(--muted);margin-top:.6rem">View of our field camp on the foreland of Arklio Glacier, Ellesmere Island, in the Canadian High Arctic, July 2022</figcaption>
         </figure>
         <figure class="plate" style="margin:0;border:none;background:transparent">
           <img src="Figures_webpage/IMG_4022.jpg" alt="Barro Colorado Island, Panamá" style="width:100%;max-width:320px;height:auto;display:block;border-radius:4px">
-          <figcaption style="font-family:var(--mono);font-size:.74rem;letter-spacing:.02em;color:var(--muted);margin-top:.6rem">Tropical forest on Barro Colorado Island, Smithsonian Tropical Research Institute, Panamá, with howler monkeys visible in the canopy, including a mother carrying her young · March 2026</figcaption>
+          <figcaption style="color:var(--muted);margin-top:.6rem">Tropical forest on Barro Colorado Island, Smithsonian Tropical Research Institute, Panamá, with howler monkeys visible in the canopy, including a mother carrying her young, March 2026</figcaption>
         </figure>
       </div>
     </div>
   </div>
 </section>
+</main>
+
 <footer class="site-footer">
   <div class="foot">
-    <div class="brand"><b style="font-family:var(--display);font-size:1.05rem">Marc-Élie Adaime, Ph.D.</b><br><span class="fmono">Smithsonian Institution</span></div>
-    <div class="fmono"><a href="mailto:meadaime@gmail.com">meadaime@gmail.com</a> · <a href="https://github.com/marc-elie-adaime">GitHub</a></div>
+    <div class="brand"><b>Marc-Élie Adaime, Ph.D.</b><span class="fmono">Smithsonian Institution</span></div>
+    <div class="fmono footer-links"><a href="mailto:meadaime@gmail.com">meadaime@gmail.com</a><a href="https://github.com/marc-elie-adaime">GitHub</a></div>
   </div>
 </footer>
 <script>
-  const t=document.querySelector('.nav-toggle'),m=document.getElementById('menu');
-  t&&t.addEventListener('click',()=>{const o=m.classList.toggle('open');t.setAttribute('aria-expanded',o)});
-  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('menu');
+
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  }
 </script>
 </body>
 </html>
