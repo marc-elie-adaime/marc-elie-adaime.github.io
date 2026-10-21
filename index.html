@@ -15,10 +15,10 @@
   <nav class="nav" aria-label="Primary">
     <a class="brand" href="index.html">
       <b>Marc-Élie Adaime</b>
-      <span>Evolution · Computational Biology · Phylogenetics · Paleoecology · Biodiversity Informatics</span>
+      <span>Evolution, computational biology, phylogenetics, paleoecology, and biodiversity informatics</span>
     </a>
 
-    <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Menu">
       <span></span>
       <span></span>
       <span></span>
@@ -34,6 +34,8 @@
   </nav>
 </header>
 
+<main id="main-content">
+
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg" aria-hidden="true"></div>
@@ -43,13 +45,11 @@
          alt="Marc-Élie Adaime"
          class="hero-portrait">
 
-    <p class="eyebrow">Postdoctoral Research Fellow · Smithsonian Institution</p>
+    <p class="eyebrow">Postdoctoral Research Fellow at the Smithsonian Institution</p>
 
     <h1>Reconstructing evolutionary histories and biodiversity from complex and incomplete biological data</h1>
 
     <p>Can we uncover the history and diversity of life from incomplete, noisy, or traditionally underused biological evidence? I develop and apply quantitative approaches, such as phylogenetic methods and image processing techniques, to study the evolution of plant lineages and the responses of ecosystems to environmental change. My research focuses primarily on tropical and polar ecosystems but also includes regional and global analyses of biodiversity across space and through time, with an emphasis on plants. I use many forms of evidence, from molecular sequences and fine-scale phenotypic variation in living and extinct organisms to morphological, anatomical, and physiological information recorded across taxonomic resources, and from biological remains and assemblages preserved in sediments to present-day species distributions. Addressing these questions involves fieldwork, laboratory analysis, and computational modeling.</p>
-
-    <p class="role">Smithsonian Institution</p>
 
     <div class="btn-row">
       <a class="btn btn-primary" href="research.html">Research</a>
@@ -61,41 +61,52 @@
 <hr class="strata">
 
 <!-- NEWS -->
-<section class="news-section" aria-label="News">
+<section class="news-section" aria-labelledby="news-heading">
   <div class="wrap">
-    <article class="news-card">
-      <p class="eyebrow">News</p>
+    <div class="news-card">
+      <h2 id="news-heading">News</h2>
 
-      <h2>
-        Our paper is now published in
-        <a href="https://www.pnas.org/doi/abs/10.1073/pnas.2607372123"
-           target="_blank"
-           rel="noopener noreferrer"><em>PNAS</em></a>!
-      </h2>
+      <!-- Add future announcements inside this scrollable area. -->
+      <div class="news-scroll" tabindex="0" role="region" aria-label="News announcements" aria-describedby="news-scroll-help">
+        <p id="news-scroll-help" class="visually-hidden">Scroll within this panel to read more announcements. You can also focus this panel and use the arrow keys.</p>
 
-      <p class="news-copy">
-        It’s also covered by the
-        <a href="https://news.illinois.edu/pollen-study-reveals-the-hidden-history-of-grasses/"
-           target="_blank"
-           rel="noopener noreferrer">U. of I. News Bureau</a>
-        and the
-        <a href="https://www.igb.illinois.edu/article/pollen-study-reveals-hidden-history-grasses"
-           target="_blank"
-           rel="noopener noreferrer">Carl R. Woese Institute for Genomic Biology</a>,
-        where a big part of this work was completed.
-      </p>
+        <article class="news-item">
+          <h3>Talk at the University of Chicago</h3>
+          <p>I’ll be giving a talk in the Department of the Geophysical Sciences at the University of Chicago on <time datetime="2026-10-23">Friday, October 23, 2026</time>.
+            <a href="https://events.uchicago.edu/event/273619-geo-sci-seminar-marc-elie-adaime-smithsonian-institut"
+               target="_blank"
+               rel="noopener noreferrer">See details</a>.
+          </p>
+        </article>
 
-      <div style="margin-top:1.6rem">
-        <h2>
-          New paper in
-          <a href="https://nsojournals.onlinelibrary.wiley.com/doi/10.1002/oik.11817"
-             target="_blank"
-             rel="noopener noreferrer"><em>Oikos</em></a>
-        </h2>
+        <article class="news-item">
+          <h3>Our paper is now published in
+            <a href="https://www.pnas.org/doi/abs/10.1073/pnas.2607372123"
+               target="_blank"
+               rel="noopener noreferrer"><em>PNAS</em></a>!
+          </h3>
+          <p>It’s also covered by the
+            <a href="https://news.illinois.edu/pollen-study-reveals-the-hidden-history-of-grasses/"
+               target="_blank"
+               rel="noopener noreferrer">U. of I. News Bureau</a>
+            and the
+            <a href="https://www.igb.illinois.edu/article/pollen-study-reveals-hidden-history-grasses"
+               target="_blank"
+               rel="noopener noreferrer">Carl R. Woese Institute for Genomic Biology</a>,
+            where a big part of this work was completed.
+          </p>
+        </article>
 
-        <p class="news-copy">This work comes from our field expedition to Ellesmere Island in the Canadian High Arctic.</p>
+        <article class="news-item">
+          <h3>New paper in
+            <a href="https://nsojournals.onlinelibrary.wiley.com/doi/10.1002/oik.11817"
+               target="_blank"
+               rel="noopener noreferrer"><em>Oikos</em></a>
+          </h3>
+          <p>This work comes from our field expedition to Ellesmere Island in the Canadian High Arctic.</p>
+        </article>
       </div>
-    </article>
+    </div>
   </div>
 </section>
 
@@ -115,17 +126,15 @@
 
       <figure class="plate reveal about-core" style="margin:0;border:none;background:transparent">
         <img src="Figures_webpage/E3F15C0B-B08D-48F5-A7C0-5E23C1D856FC.JPG"
-             alt="Lake sediment core from Lac Mégantic"
-             style="width:100%;max-width:260px;height:auto;display:block;border-radius:4px">
+             alt="Lake sediment core from Lac Mégantic" style="width:100%;max-width:260px;height:auto;display:block;border-radius:4px">
 
-        <figcaption style="border-top:none;padding-top:.7rem;max-width:520px">Coring on a foggy day in the middle of a frozen Lac Mégantic. These sediment archives preserve biological traces of past life, from environmental DNA (eDNA) to remains of plants, animals, diatoms, and cyanobacteria. They offer an exceptional natural laboratory for testing ecological and evolutionary hypotheses, from population change through time to shifts in biodiversity, and for comparing observed long-term biological change with predictions from computational models. Lac Mégantic, Québec · February 2016</figcaption>
+        <figcaption style="border-top:none;padding-top:.7rem;max-width:520px">Coring on a foggy day in the middle of a frozen Lac Mégantic. These sediment archives preserve biological traces of past life, from environmental DNA (eDNA) to remains of plants, animals, diatoms, and cyanobacteria. They offer an exceptional natural laboratory for testing ecological and evolutionary hypotheses, from population change through time to shifts in biodiversity, and for comparing observed long-term biological change with predictions from computational models. Lac Mégantic, Québec, February 2016</figcaption>
       </figure>
     </div>
 
     <figure class="plate reveal" style="margin:2.5rem auto 0;border:none;background:transparent;max-width:600px">
       <img src="Figures_webpage/Phylogenetic_placement_figure.png"
-           alt="Method linking DNA sequence data, superresolution pollen imaging, and neural networks to place species in a time-calibrated Podocarpus phylogeny"
-           style="width:100%;height:auto;display:block;border-radius:4px">
+           alt="Method linking DNA sequence data, superresolution pollen imaging, and neural networks to place species in a time-calibrated Podocarpus phylogeny" style="width:100%;height:auto;display:block;border-radius:4px">
 
       <figcaption style="border-top:none;padding-top:.8rem;max-width:80ch">A method we developed to place unknown species in a molecular phylogeny from morphology alone. The reference phylogeny we use is inferred from DNA sequence alignments (A); superresolution microscopy captures the shape, texture, and internal structure of pollen grains (B); and neural networks (C), guided by phylogenetic distances, learn representations of that morphology to place unknown, potentially extinct species within the reference phylogeny (D). The approach generalizes to other organisms with evolutionarily meaningful morphology.</figcaption>
     </figure>
@@ -145,10 +154,9 @@
 
       <article class="card reveal" style="border:none;background:#fff;border-radius:6px;box-shadow:0 1px 4px rgba(20,58,107,.08)">
         <img src="Figures_webpage/IMG_9360.JPG"
-             alt="Time-calibrated phylogeny of Podocarpus"
-             style="width:100%;height:auto;display:block;margin-bottom:1.1rem;border-radius:3px">
+             alt="Time-calibrated phylogeny of Podocarpus" style="width:100%;height:auto;display:block;margin-bottom:1.1rem;border-radius:3px">
 
-        <span class="num">EVOLUTIONARY CHANGE</span>
+        <span class="num">Evolutionary change</span>
 
         <h3>Evolution and adaptation across deep time</h3>
 
@@ -157,10 +165,9 @@
 
       <article class="card reveal" style="border:none;background:#fff;border-radius:6px;box-shadow:0 1px 4px rgba(20,58,107,.08)">
         <img src="Figures_webpage/WHL_Sediment_Core.png"
-             alt="Ward Hunt Lake sediment core"
-             style="width:100%;height:auto;display:block;margin-bottom:1.1rem;border-radius:3px">
+             alt="Ward Hunt Lake sediment core" style="width:100%;height:auto;display:block;margin-bottom:1.1rem;border-radius:3px">
 
-        <span class="num">ECOLOGICAL CHANGE</span>
+        <span class="num">Ecological change</span>
 
         <h3>Ecosystems and environmental change</h3>
 
@@ -169,10 +176,9 @@
 
       <article class="card reveal" style="border:none;background:#fff;border-radius:6px;box-shadow:0 1px 4px rgba(20,58,107,.08)">
         <img src="Figures_webpage/Fig_1_Updated_Flowchart_Pipeline_Final_Webpage_MEA_Index.png"
-             alt="Pollen imaging and analysis"
-             style="width:100%;height:auto;display:block;margin-bottom:1.1rem;border-radius:3px">
+             alt="Pollen imaging and analysis" style="width:100%;height:auto;display:block;margin-bottom:1.1rem;border-radius:3px">
 
-        <span class="num">METHODS</span>
+        <span class="num">Methods</span>
 
         <h3>New methods for open challenges in ecology &amp; evolution</h3>
 
@@ -206,55 +212,41 @@
 
       <figure class="plate reveal" style="border:none;background:transparent">
         <img src="Figures_webpage/IMG_20220724_194312.jpg"
-             alt="Field sampling in the Canadian High Arctic"
-             style="width:100%;height:auto;display:block;border-radius:4px">
+             alt="Field sampling in the Canadian High Arctic" style="width:100%;height:auto;display:block;border-radius:4px">
 
-        <figcaption style="font-family:var(--mono);font-size:.74rem;letter-spacing:.02em;color:var(--muted);margin-top:.7rem">Field sampling in northwestern Ellesmere Island (Nunavut), Canadian High Arctic · July 2022</figcaption>
+        <figcaption style="margin-top:.7rem">Field sampling in northwestern Ellesmere Island (Nunavut), Canadian High Arctic, July 2022</figcaption>
       </figure>
     </div>
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="foot">
     <div class="brand">
-      <b style="font-family:var(--display);font-size:1.05rem">Marc-Élie Adaime, Ph.D.</b>
-      <br>
+      <b>Marc-Élie Adaime, Ph.D.</b>
       <span class="fmono">Smithsonian Institution</span>
     </div>
 
-    <div class="fmono">
+    <div class="fmono footer-links">
       <a href="mailto:meadaime@gmail.com">meadaime@gmail.com</a>
-      ·
       <a href="https://github.com/marc-elie-adaime">GitHub</a>
     </div>
   </div>
 </footer>
 
 <script>
-  const t = document.querySelector('.nav-toggle');
-  const m = document.getElementById('menu');
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('menu');
 
-  if (t && m) {
-    t.addEventListener('click', () => {
-      const open = m.classList.toggle('open');
-      t.setAttribute('aria-expanded', String(open));
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
     });
   }
-
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: .12 });
-
-  document.querySelectorAll('.reveal').forEach(element => {
-    io.observe(element);
-  });
 </script>
 
 </body>
