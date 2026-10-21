@@ -11,28 +11,30 @@
 <body>
 <header class="site-header">
   <nav class="nav" aria-label="Primary">
-    <a class="brand" href="index.html"><b>Marc-Élie Adaime</b><span>Evolution · Computational Biology · Phylogenetics · Paleoecology · Biodiversity Informatics</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a class="brand" href="index.html"><b>Marc-Élie Adaime</b><span>Evolution, computational biology, phylogenetics, paleoecology, and biodiversity informatics</span></a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="research.html">Research</a></li>
-      <li><a href="publications.html" aria-current="page">Publications</a></li>R
+      <li><a href="publications.html" aria-current="page">Publications</a></li>
       <li><a href="cv.html">CV</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
+
+<main id="main-content">
 <section class="section" style="padding-top:1.5rem;padding-bottom:1rem">
   <div class="wrap">
     <div class="pub-header-grid" style="display:grid;grid-template-columns:1.4fr 1fr;gap:2.5rem;align-items:center">
       <div>
         <p class="eyebrow reveal">Publications &amp; manuscripts</p>
-        <h2 class="reveal" style="font-size:clamp(2rem,4.5vw,3rem)">Selected work</h2>
+        <h1 class="page-title reveal" style="font-size:clamp(2rem,4.5vw,3rem)">Selected work</h1>
         <p class="lead reveal">Peer-reviewed articles, manuscripts in progress, open-source software, and datasets.</p>
       </div>
       <figure class="reveal pub-header-fig" style="margin:2.5rem 0 0">
         <img src="Figures_webpage/Wallace_Field_notes_and_sketches_license-CC-BY-NC.png" alt="Field notes and sketches by Alfred Russel Wallace, whose fieldwork across the Malay Archipelago laid the foundations of modern biogeography." style="width:100%;max-width:350px;height:auto;display:block;border-radius:4px;margin-left:auto">
-        <figcaption style="font-family:var(--mono);font-size:.72rem;letter-spacing:.02em;color:var(--muted);margin-top:.6rem;max-width:350px;margin-left:auto">Field notes and sketches by Alfred Russel Wallace, whose fieldwork across the Malay Archipelago laid the foundations of modern biogeography. CC BY-NC.</figcaption>
+        <figcaption style="color:var(--muted);margin-top:.6rem;max-width:350px;margin-left:auto">Field notes and sketches by Alfred Russel Wallace, whose fieldwork across the Malay Archipelago laid the foundations of modern biogeography. CC BY-NC.</figcaption>
       </figure>
     </div>
   </div>
@@ -118,17 +120,24 @@
     </div>
   </div>
 </section>
+</main>
+
 <footer class="site-footer">
   <div class="foot">
-    <div class="brand"><b style="font-family:var(--display);font-size:1.05rem">Marc-Élie Adaime, Ph.D.</b><br><span class="fmono">Smithsonian Institution</span></div>
-    <div class="fmono"><a href="mailto:meadaime@gmail.com">meadaime@gmail.com</a> · <a href="https://github.com/marc-elie-adaime">GitHub</a></div>
+    <div class="brand"><b>Marc-Élie Adaime, Ph.D.</b><span class="fmono">Smithsonian Institution</span></div>
+    <div class="fmono footer-links"><a href="mailto:meadaime@gmail.com">meadaime@gmail.com</a><a href="https://github.com/marc-elie-adaime">GitHub</a></div>
   </div>
 </footer>
 <script>
-  const t=document.querySelector('.nav-toggle'),m=document.getElementById('menu');
-  t&&t.addEventListener('click',()=>{const o=m.classList.toggle('open');t.setAttribute('aria-expanded',o)});
-  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('menu');
+
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  }
 </script>
 </body>
 </html>
